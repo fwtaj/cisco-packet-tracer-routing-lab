@@ -1,0 +1,86 @@
+
+
+Router>enable
+Router#conf
+Router#configure t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface g0/1
+Router(config-if)#ip address 192.168.10.1 255.255.255.0
+Router(config-if)#hostname NY
+NY(config)#exit
+NY#
+%SYS-5-CONFIG_I: Configured from console by console
+exit
+
+
+
+
+
+
+
+
+
+NY con0 is now available
+
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+NY>enable
+NY#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+NY(config)#interface g0/0
+NY(config-if)#ip address 192.168.20.1 255.255.255.0
+NY(config-if)#no shutdown
+
+NY(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+NY(config-if)#exit
+NY(config)#interface g0/1
+NY(config-if)#no shutdown
+
+NY(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+NY(config-if)#exit
+NY(config)#exit
+NY#
+%SYS-5-CONFIG_I: Configured from console by console
+
+NY#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+
+
+
+
+
+
+
+
+NY con0 is now available
+
+
+
+
+
+
+Press RETURN to get started.

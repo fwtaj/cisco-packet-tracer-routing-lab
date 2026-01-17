@@ -1,0 +1,72 @@
+Would you like to enter the initial configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+
+Router>enable
+Router#interface g0/0
+                 ^
+% Invalid input detected at '^' marker.
+	
+Router#hostname LA
+                ^
+% Invalid input detected at '^' marker.
+	
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname LA
+LA(config)#interface g0/0
+LA(config-if)#ip address 192.168.20.2 255.255.255.0
+LA(config-if)#exit
+LA(config)#interface g0/1
+LA(config-if)#ip address 192.168.30.1 255.255.255.0
+LA(config-if)#exit
+LA(config)#exit
+LA#
+%SYS-5-CONFIG_I: Configured from console by console
+
+LA#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+LA(config)#interface g0/0
+LA(config-if)#no shurdown
+                    ^
+% Invalid input detected at '^' marker.
+	
+LA(config-if)#no shutdown
+
+LA(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+LA(config-if)#exit
+LA(config)#interface g0/1
+LA(config-if)#no shutdown
+
+LA(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+LA(config-if)#exit
+LA(config)#exit
+LA#
+%SYS-5-CONFIG_I: Configured from console by console
+
+LA#
+
+
+
+
+
+
+
+
+LA con0 is now available
+
+
+
+
+
